@@ -1,0 +1,56 @@
+import java.io.*;
+import java.util.*;
+class Main
+{
+ public static void main(String args[]) 
+  {
+   int i, found=0;
+
+   Scanner obj= new Scanner(System.in); 
+   int a[]=new int[10]; 
+   System.out.println("enter size of array: "); 
+   int n= obj.nextInt();
+//entering elements in array 
+   System.out.println("enter the elements in array: "); 
+   for (i=0; i<n;i++)
+    {
+     a[i]=obj.nextInt();
+    }
+//showing array
+   System.out.println("*********Your array is************\n");
+   for (i=0; i<n;i++)
+    {
+     System.out.println("\t"+a[i]);
+    }
+   System.out.println("************************************");
+//item searching....
+   System.out.println("enter the value to be replaced: "); 
+   int re=obj.nextInt();
+   for (i=0;i<n;i++)
+    {
+     if(a[i]==re)
+       {
+        found=1;
+       }
+    }
+   if(found==0)
+    {
+     System.out.println("Not found");
+    }
+   else
+    {
+     System.out.println("enter the value that is placed"); 
+     int p1=obj.nextInt();
+//replaced array
+     System.out.println("Resultant array\n");
+     for(i=0;i<n;i++)
+      {
+       if(a[i]==re)
+        { System.out.println("\t"+p1); }
+       else
+        { System.out.println("\t"+a[i]); }
+      }
+    }
+  }
+}        
+     
