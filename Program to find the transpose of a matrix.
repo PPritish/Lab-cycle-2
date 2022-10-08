@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner obj = new Scanner (System.in);
+        System.out.println("Enter order of matrix[row column]:\n");
+        int m = obj.nextInt();
+        int n = obj.nextInt();
+        int[][] a=new int[10][10];
+        int[][] b=new int[10][10];
+        int i,j ;
+        
+        for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
+                {
+                System.out.println("Enter the [" + (i)+"]["+(j)+"] element of matrix A :");
+                 a[i][j]=obj.nextInt();
+                }
+        for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
+                {
+                b[i][j]=a[j][i];
+                }
+        //showing transpose
+        System.out.println("Transpose is:");
+        System.out.println("******************************************");
+        for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
+                {
+                    System.out.println(" "+b[i][j]);
+                }
+            System.out.println("\n");
+
+    }
+}
